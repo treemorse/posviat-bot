@@ -2,6 +2,7 @@ import os
 import io
 import re
 from typing import Optional
+import random
 
 from fastapi import FastAPI, Request, Header, HTTPException
 from fastapi.responses import JSONResponse
@@ -162,7 +163,8 @@ async def _handle_photo(update: Update):
         except InvalidToken:
             await bot.send_message(chat_id, "Не удалось расшифровать. Проверьте ключ или содержимое QR.")
             return
-        await bot.send_message(chat_id, f"Успех ✅\n\n{plain}")
+        rnd = random.randint(18, 20)
+        await bot.send_message(chat_id, f"Успех ✅\n\n{plain}\n\n{rnd} лет")
     except Exception as e:
         await bot.send_message(chat_id, f"Ошибка при обработке фото: {e}")
 
