@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+python-telegram-bot==21.4
+cryptography
+qrcode
+numpy
+opencv-python-headless
+asyncpg
