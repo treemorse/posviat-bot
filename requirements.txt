@@ -2,6 +2,7 @@ fastapi
 uvicorn[standard]
 python-telegram-bot==21.4
 cryptography
+pillow
 qrcode
 numpy
 opencv-python-headless
